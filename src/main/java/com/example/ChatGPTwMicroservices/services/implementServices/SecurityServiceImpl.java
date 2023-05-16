@@ -1,5 +1,7 @@
-package com.example.ChatGPTwMicroservices.security;
+package com.example.ChatGPTwMicroservices.services.implementServices;
 
+import com.example.ChatGPTwMicroservices.services.SecurityService;
+import com.example.ChatGPTwMicroservices.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,14 +14,14 @@ import org.springframework.stereotype.Service;
 public class SecurityServiceImpl implements SecurityService {
 
 	@Autowired
-	UserDetailsService userDetailsService;
+	UserService userService;
 
 	@Autowired
 	AuthenticationManager authenticationManger;
 
 	@Override
-	public boolean login(String userName, String password) {
-		UserDetails userDetails = userDetailsService.loadUserByUsername(userName);
+	public boolean login(String email, String password) {
+		UserDetails userDetails = userService.getUserByEmail(email);
 		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userDetails, password,
 				userDetails.getAuthorities());
 		authenticationManger.authenticate(token);

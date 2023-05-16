@@ -3,11 +3,12 @@ package com.example.ChatGPTwMicroservices.repositories;
 import com.example.ChatGPTwMicroservices.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@RepositoryRestResource
-public interface UserRepository extends JpaRepository<User, Long> {
+@Repository
+public interface UserRepository {
 
     User findById(Long id);
 

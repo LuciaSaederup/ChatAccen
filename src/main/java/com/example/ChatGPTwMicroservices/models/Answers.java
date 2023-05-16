@@ -14,14 +14,19 @@ public class Answers {
     private Long id;
     private String answer;
 
-    private double price;
-
 
     public Answers() {
     }
 
     public Answers(String answer) {
         this.answer = answer;
+    }
+
+
+    @OneToMany(mappedBy="answers", fetch= FetchType.EAGER)
+    Set<Question> questions = new HashSet<>();
+    public Set<Question> getQuestions() {
+        return questions;
     }
 
     public Long getId() {
@@ -32,13 +37,14 @@ public class Answers {
         this.id = id;
     }
 
-
-
-    @OneToMany(mappedBy="answers", fetch= FetchType.EAGER)
-    Set<Question> questions = new HashSet<>();
-    public Set<Question> getQuestions() {
-        return questions;
+    public String getAnswer() {
+        return answer;
     }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
 
 
 }

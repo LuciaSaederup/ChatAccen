@@ -17,4 +17,5 @@ public interface UserService {
     ResponseEntity<Object> createNewUser(User newUser);
 
     UserDTO findByEmail(String email);
+
 }
