@@ -11,4 +11,5 @@ public class Billing {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double price;
+    private Long idUser;
 }
