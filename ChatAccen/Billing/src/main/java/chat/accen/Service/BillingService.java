@@ -1,4 +1,4 @@
-package Service;
+package chat.accen.Service;
 
 import org.springframework.stereotype.Service;
 

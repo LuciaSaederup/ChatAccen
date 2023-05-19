@@ -18,4 +18,5 @@ public class Question {
     private Long id;
     private String message;
     private long billing;
+
 }

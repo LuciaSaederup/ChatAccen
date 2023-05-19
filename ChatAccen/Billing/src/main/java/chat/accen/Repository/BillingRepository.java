@@ -1,4 +1,4 @@
-package Repository;
+package chat.accen.Repository;
 
 public class BillingRepository {
 }
