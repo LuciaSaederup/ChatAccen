@@ -8,4 +8,5 @@ import reactor.core.publisher.Mono;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     public Mono<User> getUserById(Long id);
+    public Mono<User> createUser (User user);
 }

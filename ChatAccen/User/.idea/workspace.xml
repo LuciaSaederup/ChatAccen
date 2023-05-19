@@ -5,31 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5a5532c-42b2-42cf-b952-a9c6c261997c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Controller/BillingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Controller/BillingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Model/Billing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Model/Billing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Repository/BillingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Repository/BillingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Service/BillingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Service/BillingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Service/Implement/BillingServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Billing/src/main/java/chat/accen/Service/Implement/BillingServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/BillingApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/Controller/BillingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/Model/Billing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/Repository/BillingRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/Service/BillingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Billing/target/classes/Service/Implement/BillingServiceImplement.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Questions/src/main/java/chat/accen/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Questions/src/main/java/chat/accen/repository/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/UserApplication" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/Service/Implement/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Service/Implement/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/accen/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

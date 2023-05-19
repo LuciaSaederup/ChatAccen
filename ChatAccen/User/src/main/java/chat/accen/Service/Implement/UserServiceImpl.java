@@ -14,4 +14,9 @@ public class UserServiceImpl implements UserService {
     public Mono<User> getUserById(long id) {
         return userRepository.getUserById(id);
     }
+
+    @Override
+    public Mono<User> createUser(User user){
+        return Mono.just(userRepository.save(user));
+    }
 }
