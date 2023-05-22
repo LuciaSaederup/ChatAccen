@@ -1,1 +1,1 @@
-INSERT INTO question (message, billing) values ('Hola mundo?', 10);
+INSERT INTO question (message, price) values ('Hola mundo?', 10);

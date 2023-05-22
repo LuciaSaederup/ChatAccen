@@ -4,7 +4,7 @@ import chat.accen.domain.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
-
+ 
 @Repository
 //public interface QuestionRepository extends ReactiveCrudRepository<Question, Long>{
 public interface QuestionRepository extends JpaRepository<Question, Long>{

@@ -6,6 +6,8 @@ import chat.accen.restClient.AnswerRestClient;
 import chat.accen.service.QuestionService;
 import java.util.HashMap;
 import java.util.Map;
+
+import jakarta.persistence.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,11 +36,16 @@ public class QuestionController {
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<HashMap<Question, Answer>> addQuestion(@RequestBody Question question, @RequestBody Answer answer){
-        
+    public Mono<HashMap<Question, Answer>> addQuestion(@RequestBody HashMap<Question, Answer> body){
+
+        Question question = new Question();
+        Answer answer = new Answer();
         HashMap conjunto = new HashMap<Question, Answer>();
-        questionService.addQuestion(question);
-        answerRestClient.createAnswer(answer);
+        Mono<Question> newQuestionId = questionService.addQuestion(body.).log();
+        //.map(question1 -> question1.getId());
+        answer.setIdQuestion(newQuestionId.map(question1 -> question1.getId()).block());
+//        answer.setMessage(newQuestionId.);
+        answerRestClient.createAnswer(answer).log();
         conjunto.put(question, answer);
         return Mono.just(conjunto);
         

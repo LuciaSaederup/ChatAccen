@@ -28,6 +28,6 @@ public class AnswerRestClient {
                 .uri(url)
                 .body(answer, Answer.class)              
                 .retrieve()
-                .bodyToMono(Answer.class);
+                .bodyToMono(Answer.class).log();
     }    
 }
