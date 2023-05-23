@@ -1,13 +1,11 @@
 package chat.accen.controller;
 
 import chat.accen.domain.Answer;
+import chat.accen.domain.DialogueDTO;
 import chat.accen.domain.Question;
 import chat.accen.restClient.AnswerRestClient;
 import chat.accen.service.QuestionService;
-import java.util.HashMap;
-import java.util.Map;
 
-import jakarta.persistence.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,46 +13,65 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
-    
+
     private QuestionService questionService;
-    
+
     @Autowired
     AnswerRestClient answerRestClient;
-    
-    public QuestionController(QuestionService querstionService){
+
+    public QuestionController(QuestionService querstionService) {
         this.questionService = querstionService;
     }
     
-    @PostMapping
+    @PostMapping("/full")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<HashMap<Question, Answer>> addQuestion(@RequestBody HashMap<Question, Answer> body){
+    public Mono<DialogueDTO> addQuestion(@RequestBody DialogueDTO dialogue) {
+        
+        return questionService.addQuestion(dialogue.getQuestion())
+                .flatMap(q->{
+                    dialogue.getQuestion().setId(q.getId());
+                    dialogue.getAnswer().setIdQuestion(q.getId());
+                    Mono<Answer> answer = answerRestClient.createAnswer(dialogue.getAnswer()).log();
+                            return answer.map(a -> new DialogueDTO(q, a));
+                });
+    }
+    
+    
 
-        Question question = new Question();
-        Answer answer = new Answer();
-        HashMap conjunto = new HashMap<Question, Answer>();
-        Mono<Question> newQuestionId = questionService.addQuestion(body.).log();
-        //.map(question1 -> question1.getId());
-        answer.setIdQuestion(newQuestionId.map(question1 -> question1.getId()).block());
-//        answer.setMessage(newQuestionId.);
-        answerRestClient.createAnswer(answer).log();
-        conjunto.put(question, answer);
-        return Mono.just(conjunto);
+    @GetMapping("/full/{id}")
+    public Mono<DialogueDTO> getDialog(@PathVariable long id) {
+        return questionService.getQuestion(id).log()
+                .flatMap(q -> {
+                    Mono<Answer> answer = answerRestClient.getAnswer(q.getId());
+                    return answer.map(a -> new DialogueDTO(q, a));
+                });
         
     }
     
-    @GetMapping("/{message}")
-    public Mono<Question> getDaQuestion(@PathVariable long msj){
-        return questionService.getQuestion(msj);
-//        quesition.getId(9)
-//              restCliuent  Answer
+    @GetMapping("/{id}")
+    public Mono<Question> getQuestion(@PathVariable long id) {
+        return questionService.getQuestion(id).log();
+        
     }
+    @GetMapping("/answer/{id}")
+    public Mono<Answer> getTheAnswer(@PathVariable long id) {
+        return questionService.getQuestion(id).log()
+                .flatMap(q -> {
+                    return answerRestClient.getAnswer(q.getId());                    
+                });
+        
+    }
+    
+    @PostMapping("/answer")
+    public Mono<Answer> postAnswer(@RequestBody Answer answer){
+        return answerRestClient.createAnswer(answer).log();
+    }
+
 }

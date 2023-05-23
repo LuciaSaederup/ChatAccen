@@ -1,7 +1,11 @@
 package chat.accen.restClient;
 
 import chat.accen.domain.Answer;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.BodyInserter;
+import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Mono;
@@ -22,12 +26,22 @@ public class AnswerRestClient {
                 .toString();
     
     public Mono<Answer> createAnswer(Answer answer){
-        
+                
         return webClient
                 .post()
                 .uri(url)
-                .body(answer, Answer.class)              
+                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_NDJSON_VALUE)
+                .body(Mono.just(answer), Answer.class)
                 .retrieve()
                 .bodyToMono(Answer.class).log();
-    }    
+    }
+    
+    public Mono<Answer> getAnswer(Long idQuestion){
+                
+        return webClient
+                .get()
+                .uri(url + "/{idQuestion}", idQuestion)
+                .retrieve()
+                .bodyToMono(Answer.class).log();
+    }
 }

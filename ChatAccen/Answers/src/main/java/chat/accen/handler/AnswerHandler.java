@@ -25,17 +25,25 @@ public class AnswerHandler {
             return answerRepository.save(savedAnswer);
         });
         
-        return ServerResponse.status(HttpStatus.CREATED).bodyValue(answer);
+        return ServerResponse.status(HttpStatus.CREATED).body(answer, Answer.class);
     }
 
-    public Mono<ServerResponse> getAnswer(ServerRequest request) {
+    public Mono<ServerResponse> getAnswerNyQuestionId(ServerRequest request) {
+                
+        long idQuestion = Long.parseLong(request.pathVariable("idQuestion"));
         
-        Answer emptyAnswer = new Answer();
-        
-        long idQuestion = Long.valueOf(request.pathVariable("idQuestion"));
-        
-        Answer answer = answerRepository.findById(idQuestion).orElse(emptyAnswer);
+        Answer answer = answerRepository.findByIdQuestion(idQuestion);
         
         return ServerResponse.ok().bodyValue(answer);
     }
+    
+    public Mono<ServerResponse> getAnswerById(ServerRequest request) {
+                
+        long idQuestion = Long.parseLong(request.pathVariable("id"));
+        
+        Answer answer = answerRepository.findById(idQuestion).orElse(new Answer());
+        
+        return ServerResponse.ok().bodyValue(answer);
+    }
+    
 }

@@ -2,7 +2,7 @@ spring:
     application:
         name: question-service 
     datasource:
-        url: jdbc:h2:mem:question
+        url: jdbc:h2:mem:bdQuestion
         username: root
         password: root
         driverClassName: org.h2.Driver
