@@ -6,6 +6,7 @@ import chat.accen.Repository.BillingRepository;
 import chat.accen.Service.BillingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public class BillingServiceImplement implements BillingService {
 
@@ -14,5 +15,12 @@ public class BillingServiceImplement implements BillingService {
     @Override
     public Flux<Billing> getBillings(long idUser) {
         return Flux.fromIterable(billingRepository.findBillingsByIdUser(idUser));
+    }
+
+    @Override
+    public Mono<Billing> addBilling(Billing billing) {
+        
+        return Mono.just(billingRepository.save(billing));
+        
     }
 }

@@ -3,7 +3,7 @@ package chat.accen.controller;
 import chat.accen.domain.Answer;
 import chat.accen.domain.DialogueDTO;
 import chat.accen.domain.Question;
-import chat.accen.restClient.AnswerRestClient;
+import chat.accen.client.AnswerRestClient;
 import chat.accen.service.QuestionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +52,6 @@ public class QuestionController {
                     Mono<Answer> answer = answerRestClient.getAnswer(q.getId());
                     return answer.map(a -> new DialogueDTO(q, a));
                 });
-        
     }
     
     @GetMapping("/{id}")
