@@ -1,1 +1,1 @@
-INSERT INTO billing (price, idUser, idQuestion) values (10, 1, 1);
+INSERT INTO billing (price, id_user, id_question) values (10, 1, 1);

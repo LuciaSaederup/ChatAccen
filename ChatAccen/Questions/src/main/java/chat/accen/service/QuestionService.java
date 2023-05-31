@@ -9,5 +9,7 @@ public interface QuestionService {
    
     public Mono<Question> getQuestion(long id);
     
+    public Mono<Question> getQuestionByKeyword(String keyword);
+    
     public Mono<Question> addQuestion(Question question);
 }

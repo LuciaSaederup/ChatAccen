@@ -10,6 +10,10 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/user")
 public class UserController {
     private UserService userService;
+    
+    public UserController(UserService userService){
+        this.userService = userService;
+    }
 
     @GetMapping("/{id}")
     public Mono<User>getUserById(@PathVariable long id){
@@ -20,5 +24,16 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<User>createUser(@RequestBody User user){
         return userService.createUser(user);
+    }
+    
+    @PutMapping("/{id}")
+    public Mono<User> updateUSer(@PathVariable Long id, @RequestBody User updtUser){                
+        return userService
+                .updateUser(id, updtUser);
+    }
+    
+    @DeleteMapping("/{id}")
+    public Mono<Void> deleteUser(@PathVariable Long id){
+        return userService.deleteUser(id);
     }
 }

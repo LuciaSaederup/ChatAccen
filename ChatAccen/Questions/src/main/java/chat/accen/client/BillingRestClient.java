@@ -31,25 +31,6 @@ public class BillingRestClient {
                 .bodyToFlux(Billing.class);
     }
     
-        
-//    public Mono<Double> getBalance(){
-//        
-//        String url = UriComponentsBuilder.fromHttpUrl(billingUrl)                
-//                .buildAndExpand()
-//                .toString();
-//        
-//        Double price = 0D;
-//        
-//        return Mono.just(price).flatMap(p -> {
-//            webClient
-//                .get()
-//                .uri(url)
-//                .retrieve()
-//                .bodyToFlux(Billing.class)
-//                .map(b -> { p = p + b.getPrice()});
-//        });        
-//    }
-    
     public Mono<Billing> addBilling(Billing billing){
         
         String url = UriComponentsBuilder.fromHttpUrl(billingUrl)                

@@ -17,6 +17,10 @@ public class BillingController {
     
     private BillingService billingService;
     
+    public BillingController(BillingService billingService){
+        this.billingService = billingService;
+    }
+    
     @GetMapping("/{idUser}")
     public Flux<Billing> getBillings(@PathVariable long idUser){
         return billingService.getBillings(idUser).log();

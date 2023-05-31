@@ -9,43 +9,28 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class BillingRestClient {
-    
+
     private WebClient webClient;
-    
+
     private String billingUrl = "http://localhost:8083/billing";
-    
-    public BillingRestClient(WebClient webClient){
+
+    public BillingRestClient(WebClient webClient) {
         this.webClient = webClient;
     }
-    
-    public Flux<Billing> getBillings(Long idUser){
-        
-        String url = UriComponentsBuilder.fromHttpUrl(billingUrl)                
+
+    public Flux<Billing> getBillings(Long idUser) {
+
+        String url = UriComponentsBuilder.fromHttpUrl(billingUrl)
                 .buildAndExpand()
                 .toString();
-        
+
         return webClient
                 .get()
                 .uri(url + "/{idUser}", idUser)
                 .retrieve()
                 .bodyToFlux(Billing.class);
-    }   
-    
-    public Mono<Billing> addBilling(Billing billing){
-        
-        String url = UriComponentsBuilder.fromHttpUrl(billingUrl)                
-                .buildAndExpand()
-                .toString();
-        
-        return webClient
-                .post()
-                .uri(url)
-                .body(Mono.just(billing), Billing.class)
-                .retrieve()
-                .bodyToMono(Billing.class);
     }
-    
-    
+
 //    public Mono<Double> getBalance(Long idUser){
 //        
 //        String url = UriComponentsBuilder.fromHttpUrl(billingUrl)                
@@ -62,5 +47,4 @@ public class BillingRestClient {
 //                .flatMap(b -> { p = p + b.getPrice()});
 //        });        
 //    }
-    
 }
