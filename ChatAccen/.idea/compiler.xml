@@ -8,18 +8,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Questions" />
+        <module name="User" />
+        <module name="Answers" />
         <module name="Billing" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Answers" target="17" />
       <module name="Billing" target="17" />
       <module name="Questions" target="17" />
+      <module name="User" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Answers" options="-parameters" />
       <module name="Billing" options="-parameters" />
       <module name="Questions" options="-parameters" />
+      <module name="User" options="-parameters" />
     </option>
   </component>
 </project>

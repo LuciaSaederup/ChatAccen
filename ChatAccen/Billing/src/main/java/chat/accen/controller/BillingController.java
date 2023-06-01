@@ -1,4 +1,4 @@
-package chat.accen.Controller;
+package chat.accen.controller;
 
 import chat.accen.Model.Billing;
 import chat.accen.Service.BillingService;

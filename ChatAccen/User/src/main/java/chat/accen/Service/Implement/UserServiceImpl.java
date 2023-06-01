@@ -43,4 +43,9 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
         return Mono.empty();
     }
+    @Override
+    public Mono<User> findByEmail(String email){
+        return Mono.just(userRepository.findByEmail(email));
+    };
+
 }

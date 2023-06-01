@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/Billing/pom.xml" />
         <option value="$PROJECT_DIR$/Questions/pom.xml" />
+        <option value="$PROJECT_DIR$/User/pom.xml" />
+        <option value="$PROJECT_DIR$/Answers/pom.xml" />
       </list>
     </option>
   </component>
