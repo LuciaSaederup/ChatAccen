@@ -12,6 +12,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
+    
     @Override
     public Mono<User> getUserById(long id) {
         return Mono.just(userRepository.findById(id).orElse(new User()));

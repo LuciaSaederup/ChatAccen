@@ -36,7 +36,8 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Mono<Question> getQuestionByKeyword(String keyword) {
-        return Mono.just(questionRepository.getQuestionByKeyword(keyword));
+        return Mono.just(questionRepository.getQuestionByKeyword(keyword))
+                .switchIfEmpty(Mono.empty());
                 
 //        return Mono.just(questionRepository.findById(2L).orElse(q));
     }

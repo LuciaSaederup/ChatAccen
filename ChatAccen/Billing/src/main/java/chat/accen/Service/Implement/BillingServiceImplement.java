@@ -4,6 +4,7 @@ package chat.accen.Service.Implement;
 import chat.accen.Model.Billing;
 import chat.accen.Repository.BillingRepository;
 import chat.accen.Service.BillingService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -24,5 +25,17 @@ public class BillingServiceImplement implements BillingService {
         
         return Mono.just(billingRepository.save(billing));
         
+    }
+
+    @Override
+    public Mono<Double> getBalance(long idUser) {
+        
+        Double balance = 0d;
+        List<Billing> userBillings = billingRepository.findBillingsByIdUser(idUser);
+        
+        for (Billing userBilling : userBillings) {
+            balance += userBilling.getPrice();
+        }
+        return Mono.just(balance);
     }
 }
