@@ -1,17 +1,13 @@
 package chat.accen.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-import org.springframework.security.core.GrantedAuthority;
-
-import java.util.Set;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.security.core.GrantedAuthority;
+
+import java.util.Set;
 
 @Entity
 @Data
