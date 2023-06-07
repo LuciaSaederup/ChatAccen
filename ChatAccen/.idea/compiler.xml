@@ -11,10 +11,12 @@
         <module name="Answers" />
         <module name="User" />
         <module name="Billing" />
+        <module name="Auth" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Answers" target="17" />
+      <module name="Auth" target="1.8" />
       <module name="Billing" target="17" />
       <module name="Questions" target="17" />
       <module name="User" target="17" />
@@ -23,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Answers" options="-parameters" />
+      <module name="Auth" options="-parameters" />
       <module name="Billing" options="-parameters" />
       <module name="Questions" options="-parameters" />
       <module name="User" options="-parameters" />

@@ -4,77 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5a5532c-42b2-42cf-b952-a9c6c261997c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_attoparser_attoparser_2_0_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_3_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_5_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring6_3_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/AuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Model/CustomUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/Service/UserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/client/UserFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/config/AuthorizationServerConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/config/GlobalSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/accen/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Model/Billing.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Model/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Repository/RoleRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Service/Implement/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/Service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/UserApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/client/BillingRestClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/config/WebClientConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/SecurityService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/SecurityServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/UserDetailsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/config/OAuth2SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/config/ResouceServerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/chat/accen/security/config/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/chat/accen/User/UsersApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../User/src/test/java/chat/accen/User/UsersApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_6_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/User.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../User/User.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../User/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Service/Implement/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../User/src/main/java/chat/accen/Service/Implement/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../User/src/main/java/chat/accen/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/SecurityService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/SecurityServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/config/OAuth2SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/config/ResouceServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/main/java/chat/accen/security/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../User/src/test/java/UsersApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chat/accen/User/UsersApplicationTests.java" afterDir="false" />
+    <list default="true" id="f5a5532c-42b2-42cf-b952-a9c6c261997c" name="Changes" comment="Cambio Security">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,28 +41,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "C:/Users/lucia.saederup/Desktop/ChatGPTwMicroservices/ChatAccen/User/src/main/java",
-    "last_opened_file_path": "C:/Users/lucia.saederup/Desktop/ChatGPTwMicroservices/ChatAccen/Auth"
+    "last_opened_file_path": "C:/Users/lucia.saederup/Desktop/ChatGPTwMicroservices/ChatAccen"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="chat.accen" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="User" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="User" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -142,6 +58,14 @@
       <option name="presentableId" value="Default" />
       <updated>1684508903205</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cambio Security">
+      <created>1686081927008</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686081927008</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,5 +78,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambio Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio Security" />
   </component>
 </project>

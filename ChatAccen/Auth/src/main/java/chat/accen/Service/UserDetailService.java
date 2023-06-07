@@ -32,12 +32,6 @@ public class UserDetailService implements UserDetailsService {
     public UserDetailService() {
     }
 
-    /**
-     * Load by user name method, it calls to ms user
-     * @param username
-     * @return
-     * @throws UsernameNotFoundException
-     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = this.userClient.getByUsername(username);
