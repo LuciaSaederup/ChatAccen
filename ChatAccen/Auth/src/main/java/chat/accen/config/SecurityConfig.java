@@ -19,7 +19,7 @@ public class SecurityConfig {
     SecurityFilterChain configureSecurityFilterChain(HttpSecurity http) throws Exception {
 
         http
-                .authorizeRequests(authorizeRequests -> authorizeRequests.anyRequest().authenticated())
+                . authorizeHttpRequests(authorizeRequests -> authorizeRequests.anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults());
 
         return http.build();
@@ -30,9 +30,7 @@ public class SecurityConfig {
     public OAuth2TokenCustomizer<JwtEncodingContext> oAuth2TokenCustomizer() {
         return context -> {
             if (OAuth2TokenType.ACCESS_TOKEN.equals(context.getTokenType())) {
-//                CustomUser customUser = context.getPrincipal();
-//                context.getClaims().claim("id", customUser.getId());
-                Collection<? extends GrantedAuthority> authorities =context.getPrincipal().getAuthorities(); // GrantedAuthority
+                Collection<? extends GrantedAuthority> authorities =context.getPrincipal().getAuthorities();
             }
         };
     }
