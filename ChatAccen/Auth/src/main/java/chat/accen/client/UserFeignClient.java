@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient(name="ms-user")
+@FeignClient(name="user")
 public interface UserFeignClient {
 
-    @GetMapping("/user/search/username")
-    public User getByUsername(@RequestParam String email);
+    @GetMapping("/user/search/email")
+    public User getByEmail(@RequestParam String email);
 }

@@ -34,7 +34,7 @@ public class UserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = this.userClient.getByUsername(username);
+        User user = this.userClient.getByEmail(username);
         if (Objects.isNull(user)) {
             logger.info(String.format("User logged wrong: %s", username));
             throw new UsernameNotFoundException(String.format("User %s not found.", username));
