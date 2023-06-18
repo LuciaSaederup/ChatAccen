@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>chat.accen</groupId>
-    <artifactId>Answers</artifactId>
+    <artifactId>answers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Answers</name>
+    <name>answers</name>
     <description>Ejercicio de capsula MS</description>
     <dependencies>
         <dependency>
@@ -32,7 +32,12 @@
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>        
+        </dependency> 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> 
+            <version>4.0.1</version>           
+        </dependency>       
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
