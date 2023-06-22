@@ -1,1 +1,1 @@
-INSERT INTO users (id, email, password, user_name) values (newId(),'lucias@gmail.com', '1234', 'Lucia Saederup');
+INSERT INTO users (email, password, user_name) values ('lucias@gmail.com', '1234', 'Lucia Saederup');
