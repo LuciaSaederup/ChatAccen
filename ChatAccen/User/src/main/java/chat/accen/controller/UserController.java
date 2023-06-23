@@ -29,7 +29,7 @@ public class UserController {
     }
     
     @GetMapping("/{email}")
-    public Mono<User>getByEmail(@PathVariable String email){
+    public Mono<User> getByEmail(@PathVariable String email){
         return userService.getUserByEmail(email);
     }
 

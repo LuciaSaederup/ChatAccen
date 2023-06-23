@@ -21,16 +21,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+import org.springframework.context.annotation.Primary;
 
 @Service
-public class UserDetailService implements UserDetailsService {
+@Primary
+public class UserDetailServiceImpl implements UserDetailsService {
 
     private Logger logger = LoggerFactory.getLogger(UserDetailsService.class);
+        
     @Autowired
     private UserFeignClient userClient;
 
-
-    public UserDetailService() {
+    public UserDetailServiceImpl() {
     }
 
     @Override

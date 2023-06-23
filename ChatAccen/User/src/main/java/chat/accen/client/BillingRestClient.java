@@ -15,9 +15,8 @@ public class BillingRestClient {
     private WebClient webClient;
 
     private String billingUrl = "http://localhost:8083/billing";
-
-    public BillingRestClient(WebClient webClient) {
-        this.webClient = webClient;
+    
+    public BillingRestClient() {
     }
 
     public Flux<Billing> getBillings(Long idUser) {
