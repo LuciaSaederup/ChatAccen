@@ -5,6 +5,7 @@ import chat.accen.Model.CustomUser;
 import chat.accen.Model.Role;
 import chat.accen.Model.User;
 import chat.accen.client.UserFeignClient;
+import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +40,14 @@ public class UserDetailService implements UserDetailsService {
             logger.info(String.format("User logged wrong: %s", username));
             throw new UsernameNotFoundException(String.format("User %s not found.", username));
         }
-        List<Role> roles = Collections.singletonList(user.getRole());
+//        List<Role> roles = Collections.singletonList(user.getRole());
+        List<GrantedAuthority> roles = new ArrayList<>(); 
+        roles.addAll(user.getRole());
         if (Objects.isNull(roles)) {
             logger.info(String.format("User without roles: %s", username));
             throw new RuntimeException("User without roles");
         }
-        Collection<GrantedAuthority> grantedAuthorities = roles.stream().map(x -> new SimpleGrantedAuthority(x.getName())).collect(Collectors.toList());
+        Collection<GrantedAuthority> grantedAuthorities = roles.stream().map(x -> new SimpleGrantedAuthority(x.getAuthority())).collect(Collectors.toList());
         logger.info(String.format("User logged: %s", username));
         return new CustomUser(user);
     }

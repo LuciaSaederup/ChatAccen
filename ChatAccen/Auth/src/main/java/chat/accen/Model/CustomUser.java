@@ -1,10 +1,13 @@
 package chat.accen.Model;
 
+import java.util.ArrayList;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomUser implements UserDetails {
 
@@ -18,7 +21,10 @@ public class CustomUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return AuthorityUtils.createAuthorityList(this.user.getRole().getName());
+        
+        List<GrantedAuthority> roles = new ArrayList<>(); 
+        roles.addAll(user.getRole());
+        return AuthorityUtils.createAuthorityList();
     }
 
     @Override

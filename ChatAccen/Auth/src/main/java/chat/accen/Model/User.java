@@ -7,25 +7,22 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
     private String email;
     private String password;    
     private Double balance;
     private List<Long> detail;
-    private Role role;
+    private Set<Role> role;
     private String pais;
     private String sexo;
-    private Date fechaAlta;
-    @Column(columnDefinition = "integer default 0")
+    private Date fechaAlta;    
     private int questionsAsked;
 
 }

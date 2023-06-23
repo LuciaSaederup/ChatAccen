@@ -17,6 +17,11 @@ public class UserServiceImpl implements UserService {
     public Mono<User> getUserById(long id) {
         return Mono.just(userRepository.findById(id).orElse(new User()));
     }
+    
+    @Override
+    public Mono<User> getUserByEmail(String email) {
+        return Mono.just(userRepository.findByEmail(email));
+    }
 
     @Override
     public Mono<User> createUser(User user){

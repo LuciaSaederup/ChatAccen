@@ -7,6 +7,8 @@ import reactor.core.publisher.Mono;
 @Service
 public interface UserService {
     public Mono<User> getUserById(long id);
+    
+    public Mono<User> getUserByEmail(String email);
 
     public Mono<User> createUser(User user);
     

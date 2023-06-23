@@ -23,9 +23,14 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("user/{id}")
+    @GetMapping("/{id}")
     public Mono<User>getUserById(@PathVariable long id){
         return userService.getUserById(id);
+    }
+    
+    @GetMapping("/{email}")
+    public Mono<User>getByEmail(@PathVariable String email){
+        return userService.getUserByEmail(email);
     }
 
     @PostMapping("/registerUser")
@@ -35,13 +40,13 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @PutMapping("user/{id}")
+    @PutMapping("/{id}")
     public Mono<User> updateUSer(@PathVariable Long id, @RequestBody User updtUser){                
         return userService
                 .updateUser(id, updtUser);
     }
     
-    @DeleteMapping("user/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteUser(@PathVariable Long id){
         return userService.deleteUser(id);
     }
