@@ -2,3 +2,7 @@
 /ChatAccen/eureka-server/target/
 /ChatAccen/api-gateway/target/
 /ChatAccen/config-server/target/
+/ChatAccen/Answers/target/
+/ChatAccen/Auth/target/
+/ChatAccen/Billing/target/
+/ChatAccen/Questions/target/
