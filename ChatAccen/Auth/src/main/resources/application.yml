@@ -1,8 +1,8 @@
 spring:
     application:
-        name: user-service
+        name: auth-service
     datasource:
-        url: jdbc:h2:mem:bUser
+        url: jdbc:h2:mem:bdAuth
         username: root
         password: root
         driverClassName: org.h2.Driver
@@ -25,6 +25,17 @@ eureka:
     instance:
         hostname: localhost
         prefer-ip-address: true
+        
+---
+
+config:
+    security:
+        oauth:
+            client:
+                id: web_client
+                secret: 987654321
+            jwt:
+                key: 987654321
 
        
 
